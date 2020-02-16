@@ -12,6 +12,8 @@
 		731CC57423F6F02A00B1A60A /* array.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 731CC57223F6F02A00B1A60A /* array.hpp */; };
 		7333077223F707AA00EC4718 /* ArrayStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7333077023F707AA00EC4718 /* ArrayStack.cpp */; };
 		7333077323F707AA00EC4718 /* ArrayStack.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7333077123F707AA00EC4718 /* ArrayStack.hpp */; };
+		7333077723F9A3F200EC4718 /* FastArrayStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7333077523F9A3F200EC4718 /* FastArrayStack.cpp */; };
+		7333077823F9A3F200EC4718 /* FastArrayStack.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7333077623F9A3F200EC4718 /* FastArrayStack.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		7333076F23F7076500EC4718 /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
 		7333077023F707AA00EC4718 /* ArrayStack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayStack.cpp; sourceTree = "<group>"; };
 		7333077123F707AA00EC4718 /* ArrayStack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayStack.hpp; sourceTree = "<group>"; };
+		7333077523F9A3F200EC4718 /* FastArrayStack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FastArrayStack.cpp; sourceTree = "<group>"; };
+		7333077623F9A3F200EC4718 /* FastArrayStack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FastArrayStack.hpp; sourceTree = "<group>"; };
 		73C7FF7423EED8D900A4CB53 /* datastructure.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = datastructure.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -38,6 +42,8 @@
 		73C7FF6B23EED8D900A4CB53 = {
 			isa = PBXGroup;
 			children = (
+				7333077523F9A3F200EC4718 /* FastArrayStack.cpp */,
+				7333077623F9A3F200EC4718 /* FastArrayStack.hpp */,
 				7333077023F707AA00EC4718 /* ArrayStack.cpp */,
 				7333077123F707AA00EC4718 /* ArrayStack.hpp */,
 				7333076F23F7076500EC4718 /* utils.h */,
@@ -63,6 +69,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7333077823F9A3F200EC4718 /* FastArrayStack.hpp in Headers */,
 				731CC57423F6F02A00B1A60A /* array.hpp in Headers */,
 				7333077323F707AA00EC4718 /* ArrayStack.hpp in Headers */,
 			);
@@ -126,6 +133,7 @@
 			files = (
 				7333077223F707AA00EC4718 /* ArrayStack.cpp in Sources */,
 				731CC57023F6A5C400B1A60A /* main.cpp in Sources */,
+				7333077723F9A3F200EC4718 /* FastArrayStack.cpp in Sources */,
 				731CC57323F6F02A00B1A60A /* array.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
