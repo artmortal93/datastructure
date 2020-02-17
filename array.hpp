@@ -10,7 +10,6 @@
 #define array_hpp
 #include <iostream>
 #include <algorithm>
-
 #include <stdlib.h>
 #include <assert.h>
 
