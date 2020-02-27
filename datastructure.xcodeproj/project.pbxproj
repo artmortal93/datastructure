@@ -14,6 +14,28 @@
 		7333077323F707AA00EC4718 /* ArrayStack.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7333077123F707AA00EC4718 /* ArrayStack.hpp */; };
 		7333077723F9A3F200EC4718 /* FastArrayStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7333077523F9A3F200EC4718 /* FastArrayStack.cpp */; };
 		7333077823F9A3F200EC4718 /* FastArrayStack.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 7333077623F9A3F200EC4718 /* FastArrayStack.hpp */; };
+		7333078123FC13FF00EC4718 /* ArrayQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 7333077923FC13FE00EC4718 /* ArrayQueue.h */; };
+		7333078223FC13FF00EC4718 /* DualArrayDeque.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7333077A23FC13FE00EC4718 /* DualArrayDeque.cpp */; };
+		7333078323FC13FF00EC4718 /* RootishArrayStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7333077B23FC13FE00EC4718 /* RootishArrayStack.cpp */; };
+		7333078423FC13FF00EC4718 /* DualArrayDeque.h in Headers */ = {isa = PBXBuildFile; fileRef = 7333077C23FC13FE00EC4718 /* DualArrayDeque.h */; };
+		7333078523FC13FF00EC4718 /* ArrayDeque.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7333077D23FC13FF00EC4718 /* ArrayDeque.cpp */; };
+		7333078623FC13FF00EC4718 /* ArrayDeque.h in Headers */ = {isa = PBXBuildFile; fileRef = 7333077E23FC13FF00EC4718 /* ArrayDeque.h */; };
+		7333078723FC13FF00EC4718 /* ArrayQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7333077F23FC13FF00EC4718 /* ArrayQueue.cpp */; };
+		7333078923FC141600EC4718 /* RootishArrayStack.h in Headers */ = {isa = PBXBuildFile; fileRef = 7333078823FC141600EC4718 /* RootishArrayStack.h */; };
+		733307912405414100EC4718 /* DLList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7333078B2405414000EC4718 /* DLList.cpp */; };
+		733307922405414100EC4718 /* SLList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7333078C2405414000EC4718 /* SLList.cpp */; };
+		733307932405414100EC4718 /* SLList.h in Headers */ = {isa = PBXBuildFile; fileRef = 7333078D2405414000EC4718 /* SLList.h */; };
+		733307942405414100EC4718 /* DLList.h in Headers */ = {isa = PBXBuildFile; fileRef = 7333078E2405414100EC4718 /* DLList.h */; };
+		733307952405414100EC4718 /* SEList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7333078F2405414100EC4718 /* SEList.cpp */; };
+		733307962405414100EC4718 /* SEList.h in Headers */ = {isa = PBXBuildFile; fileRef = 733307902405414100EC4718 /* SEList.h */; };
+		7333079B2406A96500EC4718 /* SkipListSSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 733307972406A96500EC4718 /* SkipListSSet.h */; };
+		7333079C2406A96500EC4718 /* SkiplistLIst.h in Headers */ = {isa = PBXBuildFile; fileRef = 733307982406A96500EC4718 /* SkiplistLIst.h */; };
+		7333079D2406A96500EC4718 /* SkiplistLIst.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 733307992406A96500EC4718 /* SkiplistLIst.cpp */; };
+		7333079E2406A96500EC4718 /* SkipListSSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7333079A2406A96500EC4718 /* SkipListSSet.cpp */; };
+		733307A12406E1C900EC4718 /* ChainedHashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7333079F2406E1C900EC4718 /* ChainedHashTable.cpp */; };
+		733307A22406E1C900EC4718 /* ChainedHashTable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 733307A02406E1C900EC4718 /* ChainedHashTable.hpp */; };
+		733307A52407900D00EC4718 /* LinearHashTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 733307A32407900D00EC4718 /* LinearHashTable.cpp */; };
+		733307A62407900D00EC4718 /* LinearHashTable.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 733307A42407900D00EC4718 /* LinearHashTable.hpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +47,29 @@
 		7333077123F707AA00EC4718 /* ArrayStack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ArrayStack.hpp; sourceTree = "<group>"; };
 		7333077523F9A3F200EC4718 /* FastArrayStack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FastArrayStack.cpp; sourceTree = "<group>"; };
 		7333077623F9A3F200EC4718 /* FastArrayStack.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FastArrayStack.hpp; sourceTree = "<group>"; };
+		7333077923FC13FE00EC4718 /* ArrayQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayQueue.h; sourceTree = "<group>"; };
+		7333077A23FC13FE00EC4718 /* DualArrayDeque.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DualArrayDeque.cpp; sourceTree = "<group>"; };
+		7333077B23FC13FE00EC4718 /* RootishArrayStack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RootishArrayStack.cpp; sourceTree = "<group>"; };
+		7333077C23FC13FE00EC4718 /* DualArrayDeque.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DualArrayDeque.h; sourceTree = "<group>"; };
+		7333077D23FC13FF00EC4718 /* ArrayDeque.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayDeque.cpp; sourceTree = "<group>"; };
+		7333077E23FC13FF00EC4718 /* ArrayDeque.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayDeque.h; sourceTree = "<group>"; };
+		7333077F23FC13FF00EC4718 /* ArrayQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ArrayQueue.cpp; sourceTree = "<group>"; };
+		7333078023FC13FF00EC4718 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		7333078823FC141600EC4718 /* RootishArrayStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootishArrayStack.h; sourceTree = "<group>"; };
+		7333078B2405414000EC4718 /* DLList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DLList.cpp; sourceTree = "<group>"; };
+		7333078C2405414000EC4718 /* SLList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SLList.cpp; sourceTree = "<group>"; };
+		7333078D2405414000EC4718 /* SLList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLList.h; sourceTree = "<group>"; };
+		7333078E2405414100EC4718 /* DLList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLList.h; sourceTree = "<group>"; };
+		7333078F2405414100EC4718 /* SEList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SEList.cpp; sourceTree = "<group>"; };
+		733307902405414100EC4718 /* SEList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEList.h; sourceTree = "<group>"; };
+		733307972406A96500EC4718 /* SkipListSSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkipListSSet.h; sourceTree = "<group>"; };
+		733307982406A96500EC4718 /* SkiplistLIst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkiplistLIst.h; sourceTree = "<group>"; };
+		733307992406A96500EC4718 /* SkiplistLIst.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SkiplistLIst.cpp; sourceTree = "<group>"; };
+		7333079A2406A96500EC4718 /* SkipListSSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SkipListSSet.cpp; sourceTree = "<group>"; };
+		7333079F2406E1C900EC4718 /* ChainedHashTable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ChainedHashTable.cpp; sourceTree = "<group>"; };
+		733307A02406E1C900EC4718 /* ChainedHashTable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ChainedHashTable.hpp; sourceTree = "<group>"; };
+		733307A32407900D00EC4718 /* LinearHashTable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinearHashTable.cpp; sourceTree = "<group>"; };
+		733307A42407900D00EC4718 /* LinearHashTable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearHashTable.hpp; sourceTree = "<group>"; };
 		73C7FF7423EED8D900A4CB53 /* datastructure.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = datastructure.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -42,6 +87,29 @@
 		73C7FF6B23EED8D900A4CB53 = {
 			isa = PBXGroup;
 			children = (
+				733307A32407900D00EC4718 /* LinearHashTable.cpp */,
+				733307A42407900D00EC4718 /* LinearHashTable.hpp */,
+				7333079F2406E1C900EC4718 /* ChainedHashTable.cpp */,
+				733307A02406E1C900EC4718 /* ChainedHashTable.hpp */,
+				733307992406A96500EC4718 /* SkiplistLIst.cpp */,
+				733307982406A96500EC4718 /* SkiplistLIst.h */,
+				7333079A2406A96500EC4718 /* SkipListSSet.cpp */,
+				733307972406A96500EC4718 /* SkipListSSet.h */,
+				7333078B2405414000EC4718 /* DLList.cpp */,
+				7333078E2405414100EC4718 /* DLList.h */,
+				7333078F2405414100EC4718 /* SEList.cpp */,
+				733307902405414100EC4718 /* SEList.h */,
+				7333078C2405414000EC4718 /* SLList.cpp */,
+				7333078D2405414000EC4718 /* SLList.h */,
+				7333078823FC141600EC4718 /* RootishArrayStack.h */,
+				7333077D23FC13FF00EC4718 /* ArrayDeque.cpp */,
+				7333077E23FC13FF00EC4718 /* ArrayDeque.h */,
+				7333077F23FC13FF00EC4718 /* ArrayQueue.cpp */,
+				7333077923FC13FE00EC4718 /* ArrayQueue.h */,
+				7333078023FC13FF00EC4718 /* CMakeLists.txt */,
+				7333077A23FC13FE00EC4718 /* DualArrayDeque.cpp */,
+				7333077C23FC13FE00EC4718 /* DualArrayDeque.h */,
+				7333077B23FC13FE00EC4718 /* RootishArrayStack.cpp */,
 				7333077523F9A3F200EC4718 /* FastArrayStack.cpp */,
 				7333077623F9A3F200EC4718 /* FastArrayStack.hpp */,
 				7333077023F707AA00EC4718 /* ArrayStack.cpp */,
@@ -69,9 +137,20 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7333079B2406A96500EC4718 /* SkipListSSet.h in Headers */,
+				733307942405414100EC4718 /* DLList.h in Headers */,
 				7333077823F9A3F200EC4718 /* FastArrayStack.hpp in Headers */,
+				733307932405414100EC4718 /* SLList.h in Headers */,
+				7333078923FC141600EC4718 /* RootishArrayStack.h in Headers */,
+				733307962405414100EC4718 /* SEList.h in Headers */,
+				7333078623FC13FF00EC4718 /* ArrayDeque.h in Headers */,
 				731CC57423F6F02A00B1A60A /* array.hpp in Headers */,
+				7333078123FC13FF00EC4718 /* ArrayQueue.h in Headers */,
+				733307A22406E1C900EC4718 /* ChainedHashTable.hpp in Headers */,
+				733307A62407900D00EC4718 /* LinearHashTable.hpp in Headers */,
+				7333078423FC13FF00EC4718 /* DualArrayDeque.h in Headers */,
 				7333077323F707AA00EC4718 /* ArrayStack.hpp in Headers */,
+				7333079C2406A96500EC4718 /* SkiplistLIst.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +211,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				7333077223F707AA00EC4718 /* ArrayStack.cpp in Sources */,
+				733307A12406E1C900EC4718 /* ChainedHashTable.cpp in Sources */,
+				733307A52407900D00EC4718 /* LinearHashTable.cpp in Sources */,
+				733307952405414100EC4718 /* SEList.cpp in Sources */,
+				7333078323FC13FF00EC4718 /* RootishArrayStack.cpp in Sources */,
 				731CC57023F6A5C400B1A60A /* main.cpp in Sources */,
+				7333079D2406A96500EC4718 /* SkiplistLIst.cpp in Sources */,
+				733307912405414100EC4718 /* DLList.cpp in Sources */,
+				733307922405414100EC4718 /* SLList.cpp in Sources */,
+				7333078723FC13FF00EC4718 /* ArrayQueue.cpp in Sources */,
+				7333078223FC13FF00EC4718 /* DualArrayDeque.cpp in Sources */,
+				7333079E2406A96500EC4718 /* SkipListSSet.cpp in Sources */,
+				7333078523FC13FF00EC4718 /* ArrayDeque.cpp in Sources */,
 				7333077723F9A3F200EC4718 /* FastArrayStack.cpp in Sources */,
 				731CC57323F6F02A00B1A60A /* array.cpp in Sources */,
 			);

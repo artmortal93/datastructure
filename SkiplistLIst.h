@@ -73,7 +73,6 @@ protected:
                 u->length[r]=i-j;//update this layer's length
             }
             r--;
-
         }
         n++;
         return u;
@@ -136,7 +135,7 @@ public:
                 //if the node exist in this level
                 x=u->next[r]->x;
                 u->length[r]+=u->next[r]->length[r];
-                del=u->next[r];
+                del=u->next[r];//record this del node
                 u->next[r]=u->next[r]->next[r];
                 if(u==sentinel && u->next[r]==NULL)
                     h--; //if no node left

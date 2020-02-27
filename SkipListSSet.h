@@ -15,6 +15,12 @@
  * maximum height is 32's skiplist
  */
 
+
+/*
+ * path finding rule
+ * if not at the end of current skip list and still <,continue
+ * else dive in
+ */
 template  <class T> class SkiplistSSet{
 protected:
     T null;
@@ -156,7 +162,7 @@ template <class T> bool SkiplistSSet<T>::remove(T x) {
             //remove in corresponding layer
             u->next[r]=u->next[r]->next[r];
             if(u==sentinel && u->next[r]==NULL)
-                h--;//skiplist has gone down
+                h--;//skiplist has gone down because no one left in this layer
         }
         r--;
     }
