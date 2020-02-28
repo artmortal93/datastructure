@@ -14,5 +14,5 @@ add_executable(datastructure main.cpp
         SkiplistLIst.cpp SkiplistLIst.h
         ChainedHashTable.hpp ChainedHashTable.cpp
         LinearHashTable.cpp LinearHashTable.hpp
-        GeomVector.h
+        GeomVector.h BinaryTree.cpp BinaryTree.h
         )
