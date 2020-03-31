@@ -9,9 +9,11 @@
 template<class Node, class T> class RedBlackTree;
 
 ///left leaning red-black tree
-///left leaning simplify the case when 3 nodes in 2-3-4 tree, only possibly when left red
+///left leaning simplify the case of 3 nodes in 2-3-4 tree, only possibly when left red
 /// and right black
-
+/// black node parent== case2
+/// red node parent with black uncle==case3
+/// red node parent with red uncle ==case 4
 template<class Node, class T>
 class RedBlackNode : public BSTNode<Node, T> {
 protected:
@@ -77,13 +79,16 @@ template <class Node ,class T> void RedBlackTree<Node,T>::pullBlack(Node* u){
 
 ///use for 2-3-4 tree 3 node case
 ///change all two possible situation in 3-node case into black left lean situation
+//effect:change color from left child to right child
+        ///both operation keep black height propertyq
 template <class Node,class T> void RedBlackTree<Node,T>::flipLeft(Node *u) {
     swapcolours(u,u->right);
     rotateLeft(u);
     //this solution is right,check the diagram of figure 9.7 or simply imagine
 }
 
-//opposite operation
+///opposite operation
+/// /////effect:change color from right child to left child
 template <class Node,class T> void RedBlackTree<Node,T>::flipRight(Node *u) {
     swapcolours(u,u->left);
     rotateRight(u);
@@ -97,7 +102,30 @@ template <class Node,class T> void RedBlackTree<Node,T>::swapcolours(Node *u, No
 
 
 template <class Node,class T> bool RedBlackTree<Node,T>::add(T x) {
+     Node *u=new Node();
+     u->left=u->right=u->parent=nil;
+     u->x=x;
+     u->colour=red;
+     bool added=BinarySearchTree::add(u);
+     if(added)
+         addFixup(u);
+     else
+         delete u;
+     return added;
+}
 
+
+template <class Node,class T> void RedBlackTree<Node,T>::addFixup(Node *u) {
+    ///only two prop could be violate:
+    /// red edge connect prop and left lean prop
+    ///
+    while(u->colour==red){
+        ///only 3,4 node case should be considered
+        if(u==r){
+            u->colour=black;
+            return ;
+        }
+    }
 }
 
 #endif //DATASTRUCTURE_REDBLACKTREE_H
