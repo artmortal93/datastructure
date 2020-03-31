@@ -80,7 +80,7 @@ template <class Node ,class T> void RedBlackTree<Node,T>::pullBlack(Node* u){
 ///use for 2-3-4 tree 3 node case
 ///change all two possible situation in 3-node case into black left lean situation
 //effect:change color from left child to right child
-        ///both operation keep black height propertyq
+        ///both operation keep black height property only when the corespondiong child is red(right child/left child)
 template <class Node,class T> void RedBlackTree<Node,T>::flipLeft(Node *u) {
     swapcolours(u,u->right);
     rotateLeft(u);
