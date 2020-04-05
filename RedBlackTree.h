@@ -46,8 +46,8 @@ protected:
     Node *removeFixupCase1(Node *u);
     Node *removeFixupCase2(Node *u);
     Node *removeFixupCase3(Node *u);
-    void verify();
-    int verify(Node *u);
+    //void verify();
+    //int verify(Node *u);
 public:
     RedBlackTree();
     virtual ~RedBlackTree();
@@ -79,8 +79,8 @@ template <class Node ,class T> void RedBlackTree<Node,T>::pullBlack(Node* u){
 
 ///use for 2-3-4 tree 3 node case
 ///change all two possible situation in 3-node case into black left lean situation
-//effect:change color from left child to right child
-        ///both operation keep black height property only when the corespondiong child is red(right child/left child)
+///effect:change color from left child to right child
+/// ///both operation keep black height property only when the corespondiong child is red(right child/left child)
 template <class Node,class T> void RedBlackTree<Node,T>::flipLeft(Node *u) {
     swapcolours(u,u->right);
     rotateLeft(u);
@@ -114,7 +114,7 @@ template <class Node,class T> bool RedBlackTree<Node,T>::add(T x) {
      return added;
 }
 
-
+//O(logN)
 template <class Node,class T> void RedBlackTree<Node,T>::addFixup(Node *u) {
     ///only two prop could be violate:
     /// red edge connect prop and left lean prop
@@ -125,7 +125,71 @@ template <class Node,class T> void RedBlackTree<Node,T>::addFixup(Node *u) {
             u->colour=black;
             return ;
         }
+        Node *w=u->parent;
+        ///ensure left-leaning property
+        if(w->left->colour==black){
+            flipLeft(w);///do not violate black-height property
+            u=w;
+            w=u->parent;
+        }
+        if(w->colour ==black)
+            return; //no red edge property voilated==done
+        Node *g=w->parent;
+        if(g->right->colour==black) //3 node case,uncle is back
+        {
+            flipRight(g);//changle uncle color to father, fixed all
+            return;
+        }
+        else{
+            pushBlack(g);//two red case change the color
+            u=g;//and hope we could go next case
+        }
     }
 }
 
+template <class Node,class T> bool RedBlackTree::remove(T x) {
+    Node *u=findLast(x);
+    if(u==nil || compare(u->x,x)!=0)
+        return false;
+    Node *w=u->right;
+    if(w==nil){
+        w=u;//w is the node should be cleanse
+        u=w->left;//nil?
+    }
+    else{
+       while(w->left!=nil)
+           w=w->left;//the next-to node
+       u->x=w->x;//w is the next-to node of u,replace the node value with u
+       u=w->right;//nil?
+    }
+    splice(w);//distach w
+    u->colour+=w->colour;//maintain black height property temporary,may add color to nil(black node)
+    u->parent =w->parent;//set u's temproary parent to w's parent(may be set the nil)
+    delete w;
+    removeFixup(u);
+    return true;
+}
+
+template <class Node,class T> void RedBlackTree::removeFixup(Node *u) {
+    while(u->colour>black) //double black,means the node to be remove is black
+    {
+        if(u==r){
+            u->colour=black;
+        }
+    }
+}
+
+template<class Node, class T>
+RedBlackTree<Node,T>::RedBlackTree() {
+    nil = new Node;
+    nil->colour = black;
+    r = nil;
+}
+
+
+
+template<class Node, class T>
+RedBlackTree<Node,T>::~RedBlackTree() {
+    delete nil;
+}
 #endif //DATASTRUCTURE_REDBLACKTREE_H
