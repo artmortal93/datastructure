@@ -192,4 +192,96 @@ template<class Node, class T>
 RedBlackTree<Node,T>::~RedBlackTree() {
     delete nil;
 }
+
+template <class Node,class T> void RedBlackTree<Node,T>::removeFixup(Node *u) {
+
+}
+
+
+template <class Node,class T> Node* RedBlackTree<Node,T>::removeFixupCase2(Node *u) {
+    ///case 2 w parent unknown
+    /// u is left child with two black
+    /// v is black
+    //target:achieve two red child one extra black parent to lend out the extra black by push black
+    Node *w=u->parent;
+    Node *v= w->right;
+    pullBlack(w);
+    flipLeft(w);//fix left lean,and give the extra black to parent,now v is double black/black
+    Node *q=w->right; ///check q color
+    if(q->colour==red){
+        ///q =red could lend him a black
+        /// and q-w is now violate red edge property, w violate left lean property
+        rotateLeft(w);
+        flipRight(v);
+        pushBlack(q);//make  2red child one extra black parent
+        if(v->right->colour==red){
+            flipLeft(v);//fix left lean
+        }
+        return q;
+    }
+    else{
+        ///q is black,no property violated , no way to borrow black to cousin,move up the case
+        return v;
+    }
+}
+
+
+template <class Node,class T> Node* RedBlackTree<Node,T>::removeFixupCase3(Node *u) {
+    ///case 2 w parent unknown
+    /// u is right child with two black
+    /// v is left child wuth black
+    Node *w=u->parent;
+    Node *v=w->left;
+    pullBlack(w); //symmetric to make red node first
+    flipRight(w);
+    //check q's color to determine what to do
+    Node *q=w->left;
+    if(q->colour==red){
+        //q-w is red-red
+        rotateRight(w);
+        flipLeft(v);
+        pushBlack(q);
+        return q;//symmetric implementation
+    }
+    else{
+           if(v->left->colour==red){
+               pushBlack(v);
+               return v;
+           }
+           else{
+               flipLeft(v);
+               return w;
+           }
+    }
+}
+
+
+template <class Node,class T> Node* RedBlackTree<Node,T>::removeFixupCase1(Node *u) {
+    flipRight(u->parent);
+    return u;//into case 1
+}
+
+template <class Node,class T> void RedBlackTree<Node,T>::removeFixup(Node *u){
+    while(u->colour >black){ ///two black node is fix up
+        if(u==r){
+            u->colour=black;
+        }
+        else if (u->parent->left->colour==red){
+            u=removeFixupCase1(u);
+        }
+        else if (u== u->parent->left){
+            u=removeFixupCase2(u);
+        }
+        else{
+            u=removeFixupCase3(u);
+        }
+    }
+    //finally fix up the leaning property
+    if(u!=r){
+        Node *w=u->parent;
+        if(w->right->colour == red && w->left->colour ==black){
+            flipLeft(w);
+        }
+    }
+}
 #endif //DATASTRUCTURE_REDBLACKTREE_H
