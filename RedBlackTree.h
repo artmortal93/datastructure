@@ -140,9 +140,9 @@ template <class Node,class T> void RedBlackTree<Node,T>::addFixup(Node *u) {
             flipRight(g);//changle uncle color to father, fixed all
             return;
         }
-        else{
+        else{//4 node case,uncle is red
             pushBlack(g);//two red case change the color
-            u=g;//and hope we could go next case
+            u=g;//and hope we could go next case,now u is still red
         }
     }
 }
@@ -193,9 +193,7 @@ RedBlackTree<Node,T>::~RedBlackTree() {
     delete nil;
 }
 
-template <class Node,class T> void RedBlackTree<Node,T>::removeFixup(Node *u) {
 
-}
 
 
 template <class Node,class T> Node* RedBlackTree<Node,T>::removeFixupCase2(Node *u) {
