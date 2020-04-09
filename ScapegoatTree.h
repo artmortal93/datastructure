@@ -174,7 +174,7 @@ bool ScapegoatTree<Node,T>::add(T x) {
 template <class Node,class T> bool ScapegoatTree<Node,T>::remove(T x) {
     if(BinarySearchTree<Node,T>::remove(x)){
         if(2*n<q){
-            rebuild(r); //imediately rebuild all,very unifficent
+            rebuild(r); //immediately rebuild all,very unifficent
             q=n;
         }
         return true;
