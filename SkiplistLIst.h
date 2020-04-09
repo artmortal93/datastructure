@@ -56,7 +56,7 @@ protected:
     Node* add(int i,Node *w){
         Node *u=sentinel;
         int k=w->height;
-        int r=h;
+        int r=h;//height
         int j=-1;//index of u
 
         while(r>=0){

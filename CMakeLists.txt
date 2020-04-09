@@ -15,4 +15,8 @@ add_executable(datastructure main.cpp
         ChainedHashTable.hpp ChainedHashTable.cpp
         LinearHashTable.cpp LinearHashTable.hpp
         GeomVector.h BinaryTree.cpp BinaryTree.h
-        BinarySearchTree.cpp BinarySearchTree.h Treap.cpp Treap.h ScapegoatTree.cpp ScapegoatTree.h RedBlackTree.cpp RedBlackTree.h)
+        BinarySearchTree.cpp BinarySearchTree.h Treap.cpp Treap.h ScapegoatTree.cpp ScapegoatTree.h
+        RedBlackTree.cpp RedBlackTree.h
+        AVLTree.h AVLTree.cpp
+        BinaryHeap.h BinaryHeap.cpp
+        )

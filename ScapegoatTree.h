@@ -101,6 +101,7 @@ template <class Node,class T>  inline Node* ScapegoatTree<Node,T>::buildBalanced
         a[i+m]->right->parent=a[i+m];
     return a[i+m];
 }
+
 //add a Node with return depth of this node
 template <class Node,class T> inline int ScapegoatTree<Node,T>::addWithDepth(Node *u) {
     Node *w=r;
