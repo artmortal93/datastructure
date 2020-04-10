@@ -20,4 +20,4 @@ add_executable(datastructure main.cpp
         AVLTree.h AVLTree.cpp
         BinaryHeap.h BinaryHeap.cpp
         MeldableHeap.cpp MeldableHeap.h
-        )
+        algorthim.h)

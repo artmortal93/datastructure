@@ -7,7 +7,7 @@
 
 
 #include "BinaryTree.h"
-//meldable heap== fbiohnacci heap
+//meldable heap== fbiohnacci heap/binomial heap which is meldable
 template <class Node,class T> class MedlableHeap;
 
 template <class Node,class T> class MHeapNode:public BTNode<Node>{
