@@ -1,4 +1,4 @@
-//
+                        //
 // Created by steafan on 2020/4/2.
 //
 
@@ -45,7 +45,7 @@ template <class Node,class T> bool AVLTree<Node,T>::add(T x) {
     Node *u=new Node();
     u->left=u->right=u->parent=nil;
     u->x=x;
-    bool added=BinarySearchTree::add(u);
+    bool added=BinarySearchTree<Node,T>::add(u);
     if(added)
         addFixup(u);
     else
@@ -76,22 +76,22 @@ template <class Node,class T> bool AVLTree<Node,T>::remove(T x) {
     return true;
 }
 
-template <class Node,class T> AVLTree::AVLTree(){
+template <class Node,class T> AVLTree<Node,T>::AVLTree(){
 
 }
 
-template <class Node,class T> AVLTree::~AVLTree() {
+template <class Node,class T> AVLTree<Node,T>::~AVLTree() {
 
 }
 
-template <class Node,class T> int AVLTree::BalanceFactor(Node *u) {
+template <class Node,class T> int AVLTree<Node,T>::BalanceFactor(Node *u) {
     if(u==nil)
         return 0;
     else
         return height(u->left)-height(u->right);
 }
 
-template <class Node,class T> void AVLTree::addFixup(Node *u) {
+template <class Node,class T> void AVLTree<Node,T>::addFixup(Node *u) {
     if(u==nil) {
         //add the only one node in the tree
         return;
