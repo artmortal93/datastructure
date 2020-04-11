@@ -19,4 +19,5 @@ add_executable(datastructure main.cpp
         RedBlackTree.cpp RedBlackTree.h
         AVLTree.h AVLTree.cpp
         BinaryHeap.h BinaryHeap.cpp
-        )
+        MeldableHeap.cpp MeldableHeap.h
+        algorthim.h StringAlgorthim.h GraphAlgorthim.h)
