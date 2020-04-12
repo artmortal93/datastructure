@@ -13,11 +13,11 @@ protected:
 public:
     AdjacencyMatrix(int n);
     virtual ~AdjacencyMatrix();
-    void addEdge(int i,int j){
+    virtual void addEdge(int i,int j){
         a[i][j]=true;
     }
 
-    void removeEdge(int i,int j){
+    virtual void removeEdge(int i,int j){
         a[i][j]=false;
     }
 
@@ -43,6 +43,51 @@ public:
     int nVertices(){
         return n;
     }
+};
+
+class WeightedAdjacnecyMatrix:public AdjacencyMatrix{
+protected:
+    using AdjacencyMatrix::n;
+    using AdjacencyMatrix::a;
+    int **weights;
+public:
+    explicit WeightedAdjacnecyMatrix(int n):AdjacencyMatrix(n){
+        weights=new int*[n];
+        for(int i=0;i<n;i++)
+            weights[i]=new int[n];
+        for(int i=0;i<n;i++)
+            for(int j=0;j<n;j++)
+                weights[i][j]=-1;
+    }
+    ~WeightedAdjacnecyMatrix() override{
+        for(int i=0;i<n;i++){
+            delete []weights[i];
+        }
+        delete weights;
+        AdjacencyMatrix::~AdjacencyMatrix();
+    }
+
+    void addEdge(int i,int j) override{
+        a[i][j]=true;
+        weights[i][j]=1;
+    }
+
+    void removeEdge(int i,int j) override{
+        //a[i][j]=false;
+        AdjacencyMatrix::removeEdge(i,j);
+        weights[i][j]=-1;
+    }
+
+    void addEdge(int i,int j,int w=1){
+        a[i][j]=true;
+        weights[i][j]=w;
+    }
+
+    int getEdgeWeight(int i,int j){
+        return weights[i][j];
+    }
+
+
 };
 
 
