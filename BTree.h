@@ -6,9 +6,6 @@
 #define DATASTRUCTURE_BTREE_H
 
 
-class BTree {
-
-};
 
 
 #endif //DATASTRUCTURE_BTREE_H
