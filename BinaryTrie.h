@@ -6,6 +6,7 @@
 #define DATASTRUCTURE_BINARYTRIE_H
 
 #include <cstdlib>
+#include "utils.h"
 
 /// Binary Trie with bst+ double linked list in the bottom leaf layer
 /// Noted: This data structure only affects positive integer data structure
@@ -52,13 +53,13 @@ protected:
 public:
     BinaryTrie();
     virtual ~BinaryTrie();
-    bool add(T x);
-    bool remove(T x);
-    T find(T x);
+    virtual bool add(T x);
+    virtual bool remove(T x);
+    virtual T find(T x);
     int size(){
         return n;
     }
-    void clear();
+    virtual void clear();
 };
 
 template <class Node,class T> BinaryTrie<Node,T>::BinaryTrie() {
@@ -183,7 +184,7 @@ template <class Node,class T> bool BinaryTrie<Node,T>::remove(T x){
             break;
     }
     //update jump pointers,go upwards
-    //v is now the remain parent in the path of u,and should have at least one child
+    //v is now the remain parent in the path of u,and should have one child
     c=(ix>>(w-i-1))& 1;
     v->jump=u->child[1-c];//if c=0,use right child,if c=1, use left child
     v=v->parent;
