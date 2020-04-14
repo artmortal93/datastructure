@@ -56,7 +56,7 @@ template <class T> void quickSort(array<T> & a,int i,int n){
     int p=i-1,j=i,q=i+n;
     ///j=a moving pointer
     ///q=end pointer(after last one),indicate the leftmost elements that bigger than pivot
-    ///p=start pointer,before the firsr one,indicate the rightmost elements that smaller than pivot
+    ///p=start pointer,before the first one,indicate the rightmost elements that smaller than pivot
     while(j<q){
         ///important stop,j run out of space
         int comp=compare(a[j],x);

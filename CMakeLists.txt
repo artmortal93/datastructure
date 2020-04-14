@@ -20,4 +20,4 @@ add_executable(datastructure main.cpp
         AVLTree.h AVLTree.cpp
         BinaryHeap.h BinaryHeap.cpp
         MeldableHeap.cpp MeldableHeap.h
-        algorthim.h StringAlgorthim.h GraphAlgorthim.h AdjacencyMatrix.cpp AdjacencyMatrix.h AdjacencyList.cpp AdjacencyList.h BinaryTrie.cpp BinaryTrie.h)
+        algorthim.h StringAlgorthim.h GraphAlgorthim.h AdjacencyMatrix.cpp AdjacencyMatrix.h AdjacencyList.cpp AdjacencyList.h BinaryTrie.cpp BinaryTrie.h XFastTrie.cpp XFastTrie.h)
