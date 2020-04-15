@@ -270,6 +270,17 @@ public:
         return false;
     }
 
+    bool remove(T x) {
+        if (removeRecursive(x, ri)) {
+            n--;
+            Node *r = bs.readBlock(ri);
+            if (r->size() == 0 && n > 0) // root has only one child
+                ri = r->children[0];
+            return true;
+        }
+        return false;
+    }
+
 public:
     BTree(int b):bs(){
         null=(T)NULL;
@@ -278,6 +289,7 @@ public:
         b=b/2;
         ri=(new Node(this))->id;//0
     }
+
     bool add(T x){
         Node *w;
         try{
@@ -320,7 +332,7 @@ public:
 
     virtual ~BTree() {
         // FIXME: Do this
-    } ;
+    };
 
     int size() {
         return n;
