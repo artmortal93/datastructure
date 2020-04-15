@@ -31,6 +31,10 @@ public:
         length=b.length;
         return *this;
     }
+
+    T* operator+(int i) {
+        return &a[i];
+    }
     
     T& operator[](int i){
         assert(i>=0 && i<length);
