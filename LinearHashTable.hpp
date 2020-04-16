@@ -99,6 +99,8 @@ template <class T> void LinearHashTable<T>::resize() {
     }
     t=tnew;
 }
+
+
 template <class T> void LinearHashTable<T>::clear() {
     n=0;
     q=0;
@@ -140,15 +142,15 @@ template <class T> T LinearHashTable<T>::remove(T x) {
     int i=hash(x);
     while(t[i]!=null){
         T y=t[i];
-        if(y!=del && x==y){
-            if(y!=del && x==y){
-                t[i]=del;
-                n--;
-                if(8*n<t.length)resize();
-                return y;
-            }
-            i= (i==t.length-1)?0:i+1;
+        if(y!=del && x==y) {
+
+            t[i] = del;
+            n--;
+            if (8 * n < t.length)resize();
+            return y;
         }
+        i= (i==t.length-1)?0:i+1;
+
     }
     return null;
 }

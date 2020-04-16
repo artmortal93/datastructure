@@ -17,7 +17,7 @@
 template <class N,class T> class BinaryTrieNode{
 public:
     T x;
-    /// jump is the smallerst /biggest value of the subtree if this node dont have two childs
+    /// jump is the smallerst /biggest value of the subtree's node if this node dont have two childs
     N* jump;//subtree if do not have 2 childs (for inner childs)
     N* parent;
     //trinity three things shares same store space
@@ -126,7 +126,7 @@ template <class Node,class T> bool BinaryTrie<Node,T>::add(T x) {
     if(i==w)
         return false;
     Node* pred=(c==right)?u->jump:u->jump->left;//pred leaf node
-    u->jump=NULL;//u will have two child temproary
+    u->jump=NULL;//u will have two child temproary(but now at least one child)
     //now currently the i has the stop node path
     for(;i<w;i++){
         c=(ix>>(w-i-1))& 1;
@@ -192,7 +192,7 @@ template <class Node,class T> bool BinaryTrie<Node,T>::remove(T x){
     for(;i>=0;i--){
         c=(ix>>(w-i-1))& 1;
         if(v->jump==u){
-            v->jump=u->child[1-c];
+            v->jump=u->child[1-c];//here child== next,prev ,u never changes
         }
         v=v->parent;
     }

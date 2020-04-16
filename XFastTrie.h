@@ -18,7 +18,7 @@ template<class Node, class T>
 class XFastTrieNode : public BinaryTrieNode<Node,T> {
 public:
 };
-
+//XPair for hashtable searching,is the hashtable element
 template <class Node> class XPair{
 public:
     unsigned prefix;
@@ -86,7 +86,7 @@ template <class Node,class T> XFastTrie<Node,T>::~XFastTrie() {
     clear();
 }
 
-//find node using binary search
+//find node using binary search,.could return precessor and successor
 template <class Node,class T> Node* XFastTrie<Node,T>::findNode(unsigned ix) {
     int l=0,h=w+1;
     Node *v, *u = &r;

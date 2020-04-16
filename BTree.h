@@ -201,7 +201,7 @@ public:
 
     //use i-1,i+1 to avoid underflow
     void checkUnderflow(Node* u,int i){
-        if(u->children[i]<0)
+        if(u->children[i]<0) //if is leaf node,no need to solve undeflow problem
             return;
         if(i==0)
             checkUnderflowZero(u,i);//use u's right sibling
